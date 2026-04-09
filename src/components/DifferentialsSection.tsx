@@ -17,7 +17,7 @@ const container = {
 
 const card = {
   hidden: { opacity: 0, y: 30, scale: 0.9 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 200 } },
+  show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring" as const, stiffness: 200 } },
 };
 
 export const DifferentialsSection = () => (
