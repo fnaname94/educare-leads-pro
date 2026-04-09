@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,42 +6,47 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 220 20% 20%;
+    --background: 0 0% 100%;
+    --foreground: 228 58% 26%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 20%;
+    --card-foreground: 228 58% 26%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 20%;
+    --popover-foreground: 228 58% 26%;
 
-    --primary: 152 45% 45%;
+    --primary: 228 58% 26%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 90% 55%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 50 100% 50%;
+    --secondary-foreground: 228 58% 26%;
 
-    --muted: 40 20% 94%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 220 20% 95%;
+    --muted-foreground: 228 30% 45%;
 
-    --accent: 200 70% 55%;
+    --accent: 228 40% 52%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 15% 88%;
-    --input: 40 15% 88%;
-    --ring: 152 45% 45%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 228 58% 26%;
 
     --radius: 1rem;
 
-    --hero-gradient: linear-gradient(135deg, hsl(152 45% 45% / 0.08), hsl(35 90% 55% / 0.08), hsl(200 70% 55% / 0.06));
-    --warm: 35 90% 55%;
-    --warm-light: 40 100% 96%;
+    --warm: 50 100% 50%;
+    --warm-light: 50 100% 92%;
     --soft-green: 152 35% 95%;
-    --soft-blue: 200 60% 95%;
+    --soft-blue: 228 58% 26%;
     --soft-pink: 340 50% 96%;
+    --soft-yellow: 50 100% 95%;
+    --navy: 228 58% 26%;
+    --navy-light: 228 40% 52%;
+    --yellow: 50 100% 50%;
+    --yellow-light: 50 100% 70%;
+    --light-blue: 218 30% 80%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -69,9 +74,26 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    background-image: linear-gradient(135deg, hsl(var(--yellow)), hsl(var(--warm)));
   }
   .section-padding {
     @apply px-4 py-16 md:px-8 md:py-24 lg:px-16;
+  }
+}
+
+@layer components {
+  .blob-shape {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  .blob-shape-2 {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  .polka-dots {
+    background-image: radial-gradient(circle, hsl(var(--yellow) / 0.15) 2px, transparent 2px);
+    background-size: 30px 30px;
+  }
+  .polka-dots-white {
+    background-image: radial-gradient(circle, hsl(0 0% 100% / 0.12) 2px, transparent 2px);
+    background-size: 30px 30px;
   }
 }
