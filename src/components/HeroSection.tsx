@@ -47,10 +47,10 @@ export const HeroSection = () => (
           }}
           className={`absolute pointer-events-none ${item.size} z-[5]`}
           style={{
-            top: item.top,
-            left: item.left,
-            right: item.right,
-            bottom: item.bottom,
+            top: (item as any).top,
+            left: (item as any).left,
+            right: (item as any).right,
+            bottom: (item as any).bottom,
           } as React.CSSProperties}
         >
           {item.emoji}
