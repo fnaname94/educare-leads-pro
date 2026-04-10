@@ -4,18 +4,15 @@ import heroImg from "@/assets/hero-illustration.jpg";
 import { FloatingCircle, WaveDivider } from "./DecorativeShapes";
 
 const floatingEmojis = [
-  { emoji: "⭐", top: "8%", left: "75%", duration: 2.2, delay: 0, size: "text-3xl" },
-  { emoji: "✏️", top: "15%", right: "3%", duration: 2.8, delay: 0.3, size: "text-4xl" },
-  { emoji: "📖", bottom: "25%", left: "3%", duration: 3, delay: 0.5, size: "text-3xl" },
-  { emoji: "🖍️", top: "40%", left: "1%", duration: 2.5, delay: 0.2, size: "text-2xl" },
-  { emoji: "🌈", bottom: "15%", right: "8%", duration: 3.2, delay: 0.7, size: "text-3xl" },
-  { emoji: "🎨", top: "5%", left: "45%", duration: 2.6, delay: 0.1, size: "text-2xl" },
-  { emoji: "✨", bottom: "40%", right: "2%", duration: 2, delay: 0.4, size: "text-2xl" },
-  { emoji: "📚", bottom: "10%", left: "20%", duration: 2.9, delay: 0.6, size: "text-3xl" },
-  { emoji: "🌟", top: "30%", right: "12%", duration: 2.3, delay: 0.8, size: "text-4xl" },
-  { emoji: "🖊️", top: "60%", left: "8%", duration: 2.7, delay: 0.9, size: "text-2xl" },
-  { emoji: "🎒", bottom: "5%", right: "25%", duration: 3.1, delay: 0.3, size: "text-3xl" },
-  { emoji: "💡", top: "12%", left: "25%", duration: 2.4, delay: 0.5, size: "text-2xl" },
+  { emoji: "⭐", top: "5%", right: "2%", duration: 2.2, delay: 0, size: "text-3xl" },
+  { emoji: "✏️", top: "12%", right: "8%", duration: 2.8, delay: 0.3, size: "text-3xl" },
+  { emoji: "🌈", bottom: "12%", right: "5%", duration: 3.2, delay: 0.7, size: "text-3xl" },
+  { emoji: "🎨", top: "3%", right: "35%", duration: 2.6, delay: 0.1, size: "text-2xl" },
+  { emoji: "✨", bottom: "35%", right: "1%", duration: 2, delay: 0.4, size: "text-2xl" },
+  { emoji: "🌟", top: "25%", right: "15%", duration: 2.3, delay: 0.8, size: "text-3xl" },
+  { emoji: "🎒", bottom: "8%", right: "20%", duration: 3.1, delay: 0.3, size: "text-2xl" },
+  { emoji: "💡", top: "8%", right: "45%", duration: 2.4, delay: 0.5, size: "text-2xl" },
+  { emoji: "📖", bottom: "5%", right: "40%", duration: 3, delay: 0.6, size: "text-2xl" },
 ];
 
 export const HeroSection = () => (
@@ -50,10 +47,10 @@ export const HeroSection = () => (
           }}
           className={`absolute pointer-events-none ${item.size} z-[5]`}
           style={{
-            top: item.top,
-            left: item.left,
-            right: item.right,
-            bottom: item.bottom,
+            top: (item as any).top,
+            left: (item as any).left,
+            right: (item as any).right,
+            bottom: (item as any).bottom,
           } as React.CSSProperties}
         >
           {item.emoji}
