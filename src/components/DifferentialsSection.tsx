@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, GraduationCap, Globe, Brain, UserCheck } from "lucide-react";
+import { ShieldCheck, GraduationCap, Globe, Brain, UserCheck, Sparkles } from "lucide-react";
 import { WaveDivider } from "./DecorativeShapes";
 
 const items = [
@@ -8,6 +8,7 @@ const items = [
   { icon: Globe, title: "Ensino bilíngue desde cedo", desc: "Contato com o segundo idioma de forma natural e lúdica.", emoji: "🌍" },
   { icon: Brain, title: "Desenvolvimento emocional e cognitivo", desc: "Estímulos que respeitam cada fase do crescimento.", emoji: "🧠" },
   { icon: UserCheck, title: "Atenção individualizada", desc: "Acompanhamento próximo para cada criança se sentir especial.", emoji: "💛" },
+  { icon: Sparkles, title: "Atividades lúdicas e criativas", desc: "Arte, música e brincadeiras que estimulam a imaginação.", emoji: "🎨" },
 ];
 
 const container = {
