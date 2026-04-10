@@ -81,16 +81,21 @@ export const HeroSection = () => (
             Aqui, cada criança é incentivada a aprender com alegria, carinho e
             estímulos que respeitam seu tempo e potencial.
           </p>
-          <motion.a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex w-fit items-center gap-2 rounded-full bg-secondary px-8 py-4 font-heading text-lg font-bold text-secondary-foreground shadow-lg"
-          >
-            🎒 Fale com a nossa equipe
-          </motion.a>
+          <div className="flex flex-col gap-3">
+            <motion.a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-secondary px-8 py-4 font-heading text-lg font-bold text-secondary-foreground shadow-lg"
+            >
+              🎒 Fale com a nossa equipe
+            </motion.a>
+            <span className="ml-4 font-body text-base font-bold text-primary-foreground/90 flex items-center gap-2">
+              📞 (11) 97656-5537
+            </span>
+          </div>
         </motion.div>
 
         <motion.div

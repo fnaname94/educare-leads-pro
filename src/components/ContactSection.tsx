@@ -54,24 +54,29 @@ export const ContactSection = () => (
             suas dúvidas pelo WhatsApp.
           </p>
 
-          <motion.a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 rounded-full bg-secondary px-10 py-5 font-heading text-xl font-bold text-secondary-foreground shadow-xl animate-pulse-scale"
-          >
-            <MessageCircle className="h-7 w-7" fill="currentColor" />
-            Conversar pelo WhatsApp
-          </motion.a>
+          <div className="flex flex-col items-center md:items-start gap-3">
+            <motion.a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-3 rounded-full bg-secondary px-10 py-5 font-heading text-xl font-bold text-secondary-foreground shadow-xl animate-pulse-scale"
+            >
+              <MessageCircle className="h-7 w-7" fill="currentColor" />
+              Conversar pelo WhatsApp
+            </motion.a>
+            <span className="ml-4 font-body text-lg font-bold text-primary-foreground/90 flex items-center gap-2">
+              📞 (11) 97656-5537
+            </span>
+          </div>
 
           <div className="mt-12 flex flex-col items-center gap-4 text-primary-foreground/70 md:items-start sm:flex-row sm:gap-8">
-            <span className="inline-flex items-center gap-2 font-body text-sm">
-              <MapPin className="h-4 w-4 text-secondary" /> São Paulo, SP
+            <span className="inline-flex items-center gap-2 font-body text-sm text-center sm:text-left">
+              <MapPin className="h-8 w-8 sm:h-4 sm:w-4 text-secondary shrink-0" /> Rua Tomé de Souza, 68 - Lapa, São Paulo - SP
             </span>
             <span className="inline-flex items-center gap-2 font-body text-sm">
-              <Phone className="h-4 w-4 text-secondary" /> (11) 9 9999-9999
+              <Phone className="h-4 w-4 text-secondary" /> (11) 97656-5537
             </span>
           </div>
         </motion.div>
