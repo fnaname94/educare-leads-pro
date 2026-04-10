@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Globe, Music, Gamepad2 } from "lucide-react";
 import { WaveDivider } from "./DecorativeShapes";
+import bilingualImg from "@/assets/bilingual-class.jpg";
 
-const cards = [
-  { icon: Globe, label: "Imersão natural", emoji: "🌍" },
-  { icon: Music, label: "Músicas e histórias", emoji: "🎵" },
-  { icon: Gamepad2, label: "Brincadeiras em inglês", emoji: "🎮" },
+const benefits = [
+  { emoji: "🌍", label: "Imersão natural no idioma" },
+  { emoji: "🎵", label: "Músicas e histórias em inglês" },
+  { emoji: "🎮", label: "Brincadeiras bilíngues" },
+  { emoji: "🗣️", label: "Interação constante" },
 ];
 
 export const BilingualSection = () => (
@@ -36,31 +37,56 @@ export const BilingualSection = () => (
               Oferecemos um programa bilíngue que estimula o contato com um segundo
               idioma desde cedo, de forma natural e integrada à rotina da criança.
             </p>
-            <p className="font-body text-muted-foreground">
+            <p className="mb-6 font-body text-muted-foreground">
               O aprendizado acontece de maneira leve, através de atividades
               lúdicas, músicas, brincadeiras e interação constante.
             </p>
+
+            <div className="grid grid-cols-2 gap-3">
+              {benefits.map((b, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, type: "spring" }}
+                  className="flex items-center gap-2 rounded-2xl bg-primary/10 px-4 py-3"
+                >
+                  <span className="text-xl">{b.emoji}</span>
+                  <span className="font-heading text-sm font-bold text-foreground">{b.label}</span>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.85, rotate: 3 }}
+            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
             viewport={{ once: true }}
-            transition={{ type: "spring" }}
-            className="grid grid-cols-1 gap-4 sm:grid-cols-3"
+            transition={{ type: "spring", stiffness: 150 }}
+            className="relative"
           >
-            {cards.map((item, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -10, rotate: 2 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="flex flex-col items-center gap-3 rounded-3xl bg-primary p-6 text-center shadow-lg border-2 border-secondary/30 cursor-default"
-              >
-                <span className="text-3xl">{item.emoji}</span>
-                <item.icon className="h-8 w-8 text-secondary" />
-                <span className="font-heading text-sm font-bold text-primary-foreground">{item.label}</span>
-              </motion.div>
-            ))}
+            <div className="absolute -inset-2 rounded-3xl border-4 border-dashed border-secondary/30 animate-spin-slow" style={{ animationDuration: "25s" }} />
+            <img
+              src={bilingualImg}
+              alt="Crianças em aula bilíngue na Espaço Educare"
+              className="w-full rounded-3xl shadow-2xl border-4 border-primary/20 relative z-10"
+              loading="lazy"
+            />
+            <motion.span
+              animate={{ y: [-5, 5, -5] }}
+              transition={{ repeat: Infinity, duration: 2 }}
+              className="absolute -top-4 -right-2 text-4xl z-20"
+            >
+              🇺🇸
+            </motion.span>
+            <motion.span
+              animate={{ y: [3, -5, 3] }}
+              transition={{ repeat: Infinity, duration: 2.5 }}
+              className="absolute -bottom-4 -left-2 text-3xl z-20"
+            >
+              🇧🇷
+            </motion.span>
           </motion.div>
         </div>
       </div>
