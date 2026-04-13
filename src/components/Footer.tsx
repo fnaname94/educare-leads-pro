@@ -16,7 +16,7 @@ export const Footer = () => {
                         </div>
                         <div className="font-body text-primary-foreground/80 flex items-center gap-2">
                             <Phone className="h-5 w-5 text-secondary" />
-                            <span>(11) 3261-2124</span>
+                            <span>(11) 2361-2124</span>
                         </div>
                     </div>
 
