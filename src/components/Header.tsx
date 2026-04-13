@@ -18,9 +18,9 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 z-40 w-full border-b border-border/50 bg-primary/95 backdrop-blur-md">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:h-20">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:h-24">
         <a href="#inicio" className="flex items-center gap-2">
-          <img src={logo} alt="Espaço Educare" className="h-10 md:h-12" />
+          <img src={logo} alt="Espaço Educare" className="h-14 md:h-20" />
         </a>
 
         {/* Desktop */}

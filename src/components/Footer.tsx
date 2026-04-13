@@ -9,7 +9,7 @@ export const Footer = () => {
 
                     {/* Coluna 1: Info */}
                     <div className="flex flex-col items-center md:items-start gap-4">
-                        <img src={logo} alt="Espaço Educare" className="h-12 mb-2" />
+                        <img src={logo} alt="Espaço Educare" className="h-20 mb-4" />
                         <div className="font-body text-primary-foreground/80 flex items-center gap-2">
                             <MapPin className="h-5 w-5 text-secondary" />
                             <span>Rua Tomé de Souza, 68 - Lapa</span>
