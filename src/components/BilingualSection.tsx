@@ -37,9 +37,13 @@ export const BilingualSection = () => (
               Oferecemos um programa bilíngue que estimula o contato com um segundo
               idioma desde cedo, de forma natural e integrada à rotina da criança.
             </p>
-            <p className="mb-6 font-body text-muted-foreground">
+            <p className="mb-4 font-body text-muted-foreground">
               O aprendizado acontece de maneira leve, através de atividades
               lúdicas, músicas, brincadeiras e interação constante.
+            </p>
+            <p className="mb-6 font-body text-foreground bg-primary/5 p-4 rounded-xl border border-primary/10">
+              <span className="text-secondary font-bold">Parceria de sucesso com a escola de idiomas CNA!</span><br />
+              O CNA vai até a escola com toda metodologia e técnicas para os alunos.
             </p>
 
             <div className="grid grid-cols-2 gap-3">
