@@ -42,8 +42,13 @@ export const BilingualSection = () => (
               lúdicas, músicas, brincadeiras e interação constante.
             </p>
             <p className="mb-6 font-body text-foreground bg-primary/5 p-4 rounded-xl border border-primary/10">
-              <span className="text-secondary font-bold">Parceria de sucesso com a escola de idiomas CNA!</span><br />
-              O CNA vai até a escola com toda metodologia e técnicas para os alunos.
+              <span className="text-[#E20120] font-bold flex items-center flex-wrap gap-2 text-lg">
+                Parceria de sucesso com a escola de idiomas
+                <img src="/cna-logo.png" alt="CNA" className="h-8 object-contain bg-white rounded p-1" />
+              </span>
+              <span className="block mt-2">
+                O CNA vai até a escola com toda metodologia e técnicas para os alunos.
+              </span>
             </p>
 
             <div className="grid grid-cols-2 gap-3">
