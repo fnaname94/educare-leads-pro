@@ -92,9 +92,6 @@ export const HeroSection = () => (
             >
               🎒 Fale com a nossa equipe
             </motion.a>
-            <span className="ml-4 font-body text-base font-bold text-primary-foreground/90 flex items-center gap-2">
-              📞 (11) 97656-5537
-            </span>
           </div>
         </motion.div>
 

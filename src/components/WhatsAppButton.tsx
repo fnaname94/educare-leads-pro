@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const WHATSAPP_NUMBER = "5511999999999"; // Substituir pelo número real
+const WHATSAPP_NUMBER = "5511976565537"; // Número atualizado da escola
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Olá, gostaria de receber mais informações sobre a escola, valores e disponibilidade de matrícula."
 );
