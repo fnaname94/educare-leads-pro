@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MessageCircle, MapPin, Phone } from "lucide-react";
 import { whatsappUrl } from "./WhatsAppButton";
-import contactImg from "@/assets/contact-visit.jpg";
+import contactImg from "@/assets/contact-visit-brazilian.png";
 
 export const ContactSection = () => (
   <section id="contato" className="section-padding bg-primary relative overflow-hidden">
